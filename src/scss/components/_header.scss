@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .header__left-side {
@@ -11,11 +16,20 @@
 
 .header__img {
   margin-right: 57px;
+
+  @media (max-width: 575px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .header__text {
   font-size: 20px;
   margin-bottom: 0;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 }
 
 .header__contact-box {
@@ -36,6 +50,10 @@
     color: #fefefe;
     text-decoration: underline;
   }
+
+  @media (max-width: 991px) {
+    color: black;
+  }
 }
 
 .header__callback {
@@ -44,4 +62,8 @@
   text-decoration: underline;
   text-align: right;
   font-size: 18px;
+
+  @media (max-width: 991px) {
+    color: black;
+  }
 }

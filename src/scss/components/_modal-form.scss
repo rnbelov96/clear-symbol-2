@@ -5,10 +5,36 @@
   @include max-width(452px);
   background-color: white;
   border-radius: 10px;
-  padding-top: 31px;
+  padding-top: 13px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 34px;
+  padding-bottom: 18px;
+  position: relative;
+
+  &_desc {
+    &::after {
+      content: url('/src/img/gains-grass.png');
+      position: absolute;
+      right: -575px;
+      top: 250px;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+    @media (max-width: 991px) {
+      margin-left: auto;
+      margin-right: auto;
+      left: 0px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
 }
 
 .modal-form__bg {
@@ -19,7 +45,7 @@
   height: calc(100% + 24px);
   background-color: rgba(81, 151, 58, 0.42);
   border-radius: 10px;
-  box-shadow: -2.2px 20.9px 30.1px 1.9px rgba(0, 0, 1, 0.28);
+  box-shadow: -0.8px 6.9px 28.1px -7.1px rgba(0, 0, 1, 0.28);
 }
 
 .modal-form__input-box {
@@ -79,15 +105,27 @@
   }
 }
 
-.modal-form__ {
+.modal-form__policy-text {
+  width: 103%;
   font-size: 16px;
   font-weight: 100;
   color: #010101;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/icons/form/radio.png');
+    top: 0px;
+    left: -27px;
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
 
   button {
     @include reset-btn;
     color: #010101;
-    text-decoration: underline;
     font-weight: 100;
   }
 }
