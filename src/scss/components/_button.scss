@@ -1,0 +1,29 @@
+.button {
+  @include reset-btn;
+  width: 100%;
+  height: 81px;
+  background-image: linear-gradient(to top, #f2cf30, #f1c82f, #f6df54, #f2eba3);
+  box-shadow: 0px 4px 0px #b89820;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 100px;
+
+  &:hover {
+    background-image: none;
+    background-color: #f2cf30;
+  }
+
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 4px;
+  }
+
+  &_modal-form {
+    margin-bottom: 26px;
+  }
+}
