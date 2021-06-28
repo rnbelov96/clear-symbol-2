@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left-side {
+  display: flex;
+  align-items: center;
+}
+
+.header__img {
+  margin-right: 57px;
+}
+
+.header__text {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.header__contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__phone {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fefefe;
+  text-align: right;
+  margin-bottom: 5px;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: #fefefe;
+    text-decoration: underline;
+  }
+}
+
+.header__callback {
+  @include reset-btn;
+  color: #fefefe;
+  text-decoration: underline;
+  text-align: right;
+  font-size: 18px;
+}
