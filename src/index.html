@@ -163,75 +163,513 @@
 
       <section class="cloud">
         <section class="formats">
-          <h2 class="formats__title">
-            Форматы бизнеса <br />
-            для различных локаций
-          </h2>
-          <div class="formats__btns-box">
-            <button class="formats__btn"></button
-            ><button class="formats__btn"></button>
-          </div>
+          <div class="container">
+            <h2 class="formats__title">
+              Форматы бизнеса <br />
+              для различных локаций
+            </h2>
+            <div class="formats__btns-box">
+              <button class="formats__btn js-island-btn formats__btn_active">
+                Остров + интернет-магазин</button
+              ><button class="formats__btn js-shop-btn">
+                Магазин + интернет-магазин
+              </button>
+            </div>
 
-          <div class="formats__wrapper">
-            <div class="formats__wrapper-bg"></div>
-            <div class="formats__content js-island-box">
-              <div class="formats__left-side">
-                <img
-                  src="./img/island.jpg"
-                  class="formats__large-img js-island-large"
-                />
-                <div class="formats__img-box js-island-img-box">
+            <div class="formats__wrapper">
+              <div class="formats__wrapper-bg"></div>
+              <div class="formats__content js-island-box">
+                <div class="formats__left-side">
                   <img
-                    src="./img/island-small.jpg"
-                    class="formats__small-img formats__small-img_active"
+                    src="./img/island.jpg"
+                    class="formats__large-img js-island-large"
                   />
-                  <img
-                    src="./img/island-small.jpg"
-                    class="formats__small-img"
-                  />
-                  <img
-                    src="./img/island-small.jpg"
-                    class="formats__small-img"
-                  />
-                  <img
-                    src="./img/island-small.jpg"
-                    class="formats__small-img"
-                  />
-                  <img
-                    src="./img/island-small.jpg"
-                    class="formats__small-img"
-                  />
+                  <div class="formats__img-box js-island-img-box">
+                    <img
+                      src="./img/island-small.jpg"
+                      data-number="1"
+                      class="
+                        formats__small-img
+                        js-island-small
+                        formats__small-img_active
+                      "
+                    />
+                    <img
+                      src="./img/island-small.jpg"
+                      data-number="2"
+                      class="formats__small-img js-island-small"
+                    />
+                    <img
+                      src="./img/island-small.jpg"
+                      data-number="3"
+                      class="formats__small-img js-island-small"
+                    />
+                    <img
+                      src="./img/island-small.jpg"
+                      data-number="4"
+                      class="formats__small-img js-island-small"
+                    />
+                    <img
+                      src="./img/island-small.jpg"
+                      data-number="5"
+                      class="formats__small-img js-island-small"
+                    />
+                  </div>
+                </div>
+                <div class="formats__right-side">
+                  <div class="formats__stat-row">
+                    Площадь: <br />
+                    <b>6-10 кв. м.</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Выручка: <br />
+                    <b>от 400 000 до 750&nbsp;000 рублей/месяц</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Прибыль: <br />
+                    <b>от 120 000 до 250&nbsp;000 рублей/месяц</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Паушальный взнос: <br />
+                    <b>490 000 рублей</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Инвестиции в открытие магазина: <br />
+                    <b>от 310 000 до 460 000 рублей</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Окупаемость: <br />
+                    <b>6 месяцев</b>
+                  </div>
                 </div>
               </div>
-              <div class="formats__right-side">
-                <div class="formats__stat-row">
-                  Площадь: <br />
-                  <b>6-10 кв. м.</b>
+              <div class="formats__content js-shop-box visually-hidden">
+                <div class="formats__left-side">
+                  <img
+                    src="./img/shop.jpg"
+                    class="formats__large-img js-shop-large"
+                  />
+                  <div class="formats__img-box js-shop-img-box">
+                    <img
+                      src="./img/shop-small.jpg"
+                      data-number="1"
+                      class="
+                        formats__small-img
+                        js-shop-small
+                        formats__small-img_active
+                      "
+                    />
+                    <img
+                      src="./img/shop-small.jpg"
+                      data-number="2"
+                      class="formats__small-img js-shop-small"
+                    />
+                    <img
+                      src="./img/shop-small.jpg"
+                      data-number="3"
+                      class="formats__small-img js-shop-small"
+                    />
+                    <img
+                      src="./img/shop-small.jpg"
+                      data-number="4"
+                      class="formats__small-img js-shop-small"
+                    />
+                    <img
+                      src="./img/shop-small.jpg"
+                      data-number="5"
+                      class="formats__small-img js-shop-small"
+                    />
+                  </div>
                 </div>
-                <div class="formats__stat-row">
-                  Выручка: <br />
-                  <b>от 400 000 до 750 000рублей/месяц</b>
-                </div>
-                <div class="formats__stat-row">
-                  Прибыль: <br />
-                  <b>от 120 000 до 250 000 рублей/месяц</b>
-                </div>
-                <div class="formats__stat-row">
-                  Паушальный взнос: <br />
-                  <b>490 000 рублей</b>
-                </div>
-                <div class="formats__stat-row">
-                  Инвестиции в открытие магазина: <br />
-                  <b>от 310 000 до 460 000 рублей</b>
-                </div>
-                <div class="formats__stat-row">
-                  Окупаемость: <br />
-                  <b>6 месяцев</b>
+                <div class="formats__right-side">
+                  <div class="formats__stat-row">
+                    Площадь: <br />
+                    <b>15-25 кв. м.</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Выручка: <br />
+                    <b>от 400 000 до 750&nbsp;000 рублей/месяц</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Прибыль: <br />
+                    <b>от 120 000 до 250&nbsp;000 рублей/месяц</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Паушальный взнос: <br />
+                    <b>490 000 рублей</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Инвестиции в открытие магазина: <br />
+                    <b>от 310 000 до 460 000 рублей</b>
+                  </div>
+                  <div class="formats__stat-row">
+                    Окупаемость: <br />
+                    <b>6 месяцев</b>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <section class="feedback">
+          <div class="container">
+            <div class="feedback__content">
+              <h2 class="feedback__title">
+                Отправьте заявку и получите презентацию франшизы с финансовыми
+                расчетами
+              </h2>
+              <form class="modal-form modal-form_feedback">
+                <div class="modal-form__bg"></div>
+                <div class="modal-form__input-box">
+                  <label for="feedback-name" class="modal-form__label"
+                    >Введите ваше имя</label
+                  ><input
+                    type="text"
+                    id="feedback-name"
+                    placeholder="Иванов Иван"
+                    data-type="name"
+                    name="name"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <label for="feedback-phone" class="modal-form__label"
+                    >Введите ваш телефон</label
+                  ><input
+                    type="text"
+                    id="feedback-phone"
+                    placeholder="+7 (___) ___ ____"
+                    data-type="phone"
+                    name="phone"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <label for="feedback-email" class="modal-form__label"
+                    >Введите ваш e-mail</label
+                  ><input
+                    type="email"
+                    id="feedback-email"
+                    placeholder="example@mail.ru"
+                    data-type="email"
+                    name="email"
+                    class="modal-form__input"
+                  />
+                </div>
+                <button type="submit" class="button button_modal-form">
+                  Получить презентацию
+                </button>
+                <p class="modal-form__policy-text">
+                  Нажимая на кнопку «Получить презентацию», я даю согласие на
+                  обработку персональных данных и соглашаюсь с
+                  <button type="button" class="js-policy">
+                    политикой конфиденциальности
+                  </button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="grass">
+        <section class="stock">
+          <div class="container">
+            <h2 class="stock__title">
+              Ассортимент, который даже <br />
+              и при максимальной наценке <br />
+              в 478% дешевле, <br />
+              чем в розничных магазинах
+            </h2>
+            <ul class="stock__list">
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">Гель для душа</p>
+                <p class="stock__text">Закупочная цена: 54,8 рублей</p>
+                <p class="stock__text">Розничная цена: 207 рублей</p>
+                <p class="stock__price">Наценка: 278%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">Гель для мытья посуды</p>
+                <p class="stock__text">Закупочная цена: 35,4 рублей</p>
+                <p class="stock__text">Розничная цена: 138 рублей</p>
+                <p class="stock__price">Наценка: 290%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">Жидкое мыло</p>
+                <p class="stock__text">Закупочная цена: 27,6 рублей</p>
+                <p class="stock__text">Розничная цена: 104 рублей</p>
+                <p class="stock__price">Наценка: 277%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">
+                  Концентрат для стирки белого белья
+                </p>
+                <p class="stock__text">Закупочная цена: 57,6 рублей</p>
+                <p class="stock__text">Розничная цена: 184 рублей</p>
+                <p class="stock__price">Наценка: 219%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">Очиститель для стёкол</p>
+                <p class="stock__text">Закупочная цена: 41 рублей</p>
+                <p class="stock__text">Розничная цена: 184 рублей</p>
+                <p class="stock__price">Наценка: 249%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">Повседневное моющее средство</p>
+                <p class="stock__text">Закупочная цена: 59 рублей</p>
+                <p class="stock__text">Розничная цена: 207 рублей</p>
+                <p class="stock__price">Наценка: 251%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">
+                  Средство для посудомоечных машин
+                </p>
+                <p class="stock__text">Закупочная цена: 75,6 рублей</p>
+                <p class="stock__text">Розничная цена: 253 рублей</p>
+                <p class="stock__price">Наценка: 235%</p>
+              </li>
+              <li class="stock__item">
+                <div class="stock__img"></div>
+                <p class="stock__item-title">Средство для удаления засоров</p>
+                <p class="stock__text">Закупочная цена: 35,6 рублей</p>
+                <p class="stock__text">Розничная цена: 161 рублей</p>
+                <p class="stock__price">Наценка: 352%</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="catalog">
+          <div class="container">
+            <div class="catalog__content">
+              <div class="catalog__title-box">
+                <div class="catalog__title">Получите каталог продукции</div>
+                <div class="catalog__title">и оптово-розничный прайс-лист</div>
+              </div>
+              <form class="modal-form modal-form_catalog">
+                <div class="modal-form__bg"></div>
+                <div class="modal-form__input-box">
+                  <label for="catalog-name" class="modal-form__label"
+                    >Введите ваше имя</label
+                  ><input
+                    type="text"
+                    id="catalog-name"
+                    placeholder="Иванов Иван"
+                    data-type="name"
+                    name="name"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <label for="catalog-phone" class="modal-form__label"
+                    >Введите ваш телефон</label
+                  ><input
+                    type="text"
+                    id="catalog-phone"
+                    placeholder="+7 (___) ___ ____"
+                    data-type="phone"
+                    name="phone"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <label for="catalog-email" class="modal-form__label"
+                    >Введите ваш e-mail</label
+                  ><input
+                    type="email"
+                    id="catalog-email"
+                    placeholder="example@mail.ru"
+                    data-type="email"
+                    name="email"
+                    class="modal-form__input"
+                  />
+                </div>
+                <button type="submit" class="button button_modal-form">
+                  Получить прайс-лист и каталог
+                </button>
+                <p class="modal-form__policy-text">
+                  Нажимая на кнопку «Получить прайс-лист и каталог», я даю
+                  согласие на обработку персональных данных и соглашаюсь с
+                  <button type="button" class="js-policy">
+                    политикой конфиденциальности
+                  </button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            Откройте несколько магазинов — приумножьте прибыль бизнеса
+          </h2>
+          <p class="calc__text">
+            Сколько вы будете зарабатывать с франшизой «Символ чистоты»?
+          </p>
+          <div class="calc__shop-box">
+            <p class="calc__shop-label">Количество магазинов, ед.</p>
+            <div class="calc__radio-list">
+              <div class="calc__radio-box">
+                <input
+                  id="shop-1"
+                  type="radio"
+                  name="shops"
+                  value="1"
+                  checked
+                  class="calc__radio-input js-radio visually-hidden"
+                /><label for="shop-1" class="calc__radio-label">1</label>
+              </div>
+              <div class="calc__radio-box">
+                <input
+                  id="shop-2"
+                  type="radio"
+                  name="shops"
+                  value="2"
+                  class="calc__radio-input js-radio visually-hidden"
+                /><label for="shop-2" class="calc__radio-label">2</label>
+              </div>
+              <div class="calc__radio-box">
+                <input
+                  id="shop-3"
+                  type="radio"
+                  name="shops"
+                  value="3"
+                  class="calc__radio-input js-radio visually-hidden"
+                /><label for="shop-3" class="calc__radio-label">3</label>
+              </div>
+              <div class="calc__radio-box">
+                <input
+                  id="shop-4"
+                  type="radio"
+                  name="shops"
+                  value="4"
+                  class="calc__radio-input js-radio visually-hidden"
+                /><label for="shop-4" class="calc__radio-label">4</label>
+              </div>
+              <div class="calc__radio-box">
+                <input
+                  id="shop-5"
+                  type="radio"
+                  name="shops"
+                  value="5"
+                  class="calc__radio-input js-radio visually-hidden"
+                /><label for="shop-5" class="calc__radio-label">5</label>
+              </div>
+            </div>
+          </div>
+          <ul class="calc__list">
+            <li class="calc__item">
+              <p class="calc__item-title">
+                Выручка магазина (товарооборот), руб.
+              </p>
+              <input
+                type="range"
+                min="350000"
+                max="550000"
+                step="50000"
+                class="calc__range-input js-range js-shop-income-range"
+              />
+              <div class="calc__endpoints js-shop-income-endpoints">
+                <div class="calc__endpoint">350 000</div>
+                <div class="calc__endpoint">400 000</div>
+                <div class="calc__endpoint calc__endpoint_active">
+                  450 000
+                </div>
+                <div class="calc__endpoint">500 000</div>
+                <div class="calc__endpoint">550 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Стоимость аренды, руб.</p>
+              <input
+                type="range"
+                min="20000"
+                max="80000"
+                step="20000"
+                class="calc__range-input js-range js-rent-range"
+              />
+              <div class="calc__endpoints js-rent-endpoints">
+                <div class="calc__endpoint">20 000</div>
+                <div class="calc__endpoint">40 000</div>
+                <div class="calc__endpoint calc__endpoint_active">60 000</div>
+                <div class="calc__endpoint">80 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Выручка от оптовых продаж, руб.</p>
+              <input
+                type="range"
+                min="50000"
+                max="200000"
+                step="50000"
+                class="calc__range-input js-range js-opt-income-range"
+              />
+              <div class="calc__endpoints js-opt-income-endpoints">
+                <div class="calc__endpoint">50 000</div>
+                <div class="calc__endpoint">100 000</div>
+                <div class="calc__endpoint calc__endpoint_active">
+                  150 000
+                </div>
+                <div class="calc__endpoint">200 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Фонд оплаты труда, руб.</p>
+              <p class="calc__waste js-work-payment"></p>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Выручка интернет-магазина, руб.</p>
+              <input
+                type="range"
+                min="20000"
+                max="100000"
+                step="20000"
+                class="calc__range-input js-range js-eShop-income-range"
+              />
+              <div class="calc__endpoints js-eShop-income-endpoints">
+                <div class="calc__endpoint">20 000</div>
+                <div class="calc__endpoint">40 000</div>
+                <div class="calc__endpoint calc__endpoint_active">60 000</div>
+                <div class="calc__endpoint">80 000</div>
+                <div class="calc__endpoint">100 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Прочие расходы, руб.</p>
+              <input
+                type="range"
+                min="20000"
+                max="80000"
+                step="20000"
+                class="calc__range-input js-range js-rest-waste-range"
+              />
+              <div class="calc__endpoints js-rest-waste-endpoints">
+                <div class="calc__endpoint">20 000</div>
+                <div class="calc__endpoint">40 000</div>
+                <div class="calc__endpoint calc__endpoint_active">60 000</div>
+                <div class="calc__endpoint">80 000</div>
+              </div>
+            </li>
+          </ul>
+          <div class="calc__result-box">
+            <p class="calc__result-text">
+              Прибыль <span class="js-shop-label">одного</span> магазина:
+            </p>
+            <div class="calc__result-number">
+              <span class="js-calc-result">250 000</span> рублей
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 

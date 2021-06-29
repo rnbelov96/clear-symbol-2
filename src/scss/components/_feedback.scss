@@ -1,0 +1,23 @@
+.feedback {
+  padding-bottom: 154px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 80px;
+  }
+}
+
+.feedback__content {
+  @include max-width(473px);
+  margin-left: auto;
+
+  @media (max-width: 767px) {
+    margin-right: auto;
+  }
+}
+
+.feedback__title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 28px;
+}

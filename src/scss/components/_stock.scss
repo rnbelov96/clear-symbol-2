@@ -1,0 +1,119 @@
+.stock {
+  padding-top: 81px;
+
+  @media (max-width: 575px) {
+    padding-top: 50px;
+  }
+}
+
+.stock__title {
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 100px;
+
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+    font-size: 36px;
+    text-align: center;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 26px;
+    margin-bottom: 90px;
+  }
+}
+
+.stock__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.stock__item {
+  border-radius: 10px;
+  box-shadow: -2.2px 20.9px 30.1px 1.9px rgba(0, 0, 1, 0.28);
+  background-image: linear-gradient(to top, #f7f7f7, #f8f8f8);
+  @include max-width(339px);
+  min-height: 387px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 23px;
+  margin-bottom: 71px;
+
+  &:nth-child(1) .stock__img {
+    background-image: url('/src/img/gallery/stock/1.jpg');
+  }
+  &:nth-child(2) .stock__img {
+    background-image: url('/src/img/gallery/stock/2.jpg');
+  }
+  &:nth-child(3) .stock__img {
+    background-image: url('/src/img/gallery/stock/3.jpg');
+  }
+  &:nth-child(4) .stock__img {
+    background-image: url('/src/img/gallery/stock/4.jpg');
+  }
+  &:nth-child(5) .stock__img {
+    background-image: url('/src/img/gallery/stock/5.jpg');
+  }
+  &:nth-child(6) .stock__img {
+    background-image: url('/src/img/gallery/stock/6.jpg');
+  }
+  &:nth-child(7) .stock__img {
+    background-image: url('/src/img/gallery/stock/7.jpg');
+  }
+  &:nth-child(8) .stock__img {
+    background-image: url('/src/img/gallery/stock/8.jpg');
+  }
+
+  @media (max-width: 1200px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+.stock__img {
+  border-radius: 10px;
+  width: 296px;
+  height: 245px;
+  @include bg;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: -39px;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.stock__item-title {
+  font-weight: 500;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.stock__text {
+  margin-bottom: 0;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.stock__price {
+  font-weight: 600;
+  font-size: 24px;
+  color: #51973a;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}

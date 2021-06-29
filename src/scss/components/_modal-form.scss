@@ -29,6 +29,67 @@
     }
   }
 
+  &_feedback {
+    &::before {
+      content: url('/src/img/laptop.png');
+      position: absolute;
+      left: -1074px;
+      top: -260px;
+
+      @media (max-width: 767px) {
+        content: none;
+        left: 0px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      left: 0px;
+    }
+  }
+
+  &_catalog {
+    top: 22px;
+    .modal-form__bg {
+      background-color: rgba(255, 255, 255, 0.42);
+    }
+
+    &::before {
+      content: url('/src/img/arrow.png');
+      position: absolute;
+      top: 120px;
+      left: -310px;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+
+    &::after {
+      content: url('/src/img/magazine.png');
+      position: absolute;
+      top: 134px;
+      left: -734px;
+
+      @media (max-width: 1200px) {
+        top: 4px;
+        left: -694px;
+      }
+
+      @media (max-width: 767px) {
+        content: none;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      left: 0px;
+      margin-right: auto;
+    }
+  }
+
   @media (max-width: 575px) {
     padding-top: 20px;
     padding-left: 15px;
