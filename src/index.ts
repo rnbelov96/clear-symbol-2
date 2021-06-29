@@ -1,5 +1,6 @@
 import './scss/style.scss';
 import './ts/formats';
+import './ts/calc';
 // import './ts/modals';
 // import './ts/calc';
 // import './ts/setup-forms';

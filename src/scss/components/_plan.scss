@@ -1,0 +1,75 @@
+.plan__title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 47px;
+
+  @media (max-width: 991px) {
+    align-items: center;
+  }
+}
+
+.plan__title {
+  font-size: 38px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 27px;
+  padding-right: 27px;
+  background-color: #ddd355;
+  padding-left: 104px;
+
+  &:last-child {
+    position: relative;
+    padding-top: 0;
+  }
+
+  @media (max-width: 1200px) {
+    padding-left: 75px;
+  }
+
+  @media (max-width: 991px) {
+    text-align: center;
+    padding-left: 27px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 25px;
+  }
+
+  &:first-child {
+    padding-bottom: 0;
+    position: relative;
+
+    &::before {
+      content: url('/src/img/plan-paper.png');
+      position: absolute;
+      left: -59px;
+      top: -13px;
+      z-index: 1;
+
+      @media (max-width: 1200px) {
+        left: -70px;
+      }
+
+      @media (max-width: 991px) {
+        content: none;
+      }
+    }
+
+    &::after {
+      content: url('/src/img/plan-arrow.png');
+      top: 6px;
+      right: -312px;
+      position: absolute;
+      z-index: 1;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+  }
+}

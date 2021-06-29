@@ -1,0 +1,107 @@
+.steps {
+  min-height: 1405px;
+  background-image: url('/src/img/bgs/steps-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+  top: -170px;
+  margin-bottom: -170px;
+}
+
+.steps__title {
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 71px;
+  color: #51973a;
+  @include max-width(680px);
+}
+
+.steps__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.steps__item {
+  @include max-width(366px);
+  height: 528px;
+  background-image: url('/src/img/bgs/card-bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 66px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:nth-child(1) .steps__item-list .steps__item-item {
+    margin-bottom: 50px;
+  }
+
+  &:nth-child(2) .steps__item-list .steps__item-item {
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(3) .steps__item-list .steps__item-item {
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(1) .steps__item-list .steps__item-item:nth-child(1)::before {
+    content: url('/src/img/icons/steps/1.png');
+  }
+  &:nth-child(1) .steps__item-list .steps__item-item:nth-child(2)::before {
+    content: url('/src/img/icons/steps/2.png');
+  }
+  &:nth-child(1) .steps__item-list .steps__item-item:nth-child(3)::before {
+    content: url('/src/img/icons/steps/3.png');
+  }
+  &:nth-child(2) .steps__item-list .steps__item-item:nth-child(1)::before {
+    content: url('/src/img/icons/steps/4.png');
+  }
+  &:nth-child(2) .steps__item-list .steps__item-item:nth-child(2)::before {
+    content: url('/src/img/icons/steps/5.png');
+  }
+  &:nth-child(2) .steps__item-list .steps__item-item:nth-child(3)::before {
+    content: url('/src/img/icons/steps/6.png');
+  }
+  &:nth-child(3) .steps__item-list .steps__item-item:nth-child(1)::before {
+    content: url('/src/img/icons/steps/7.png');
+  }
+  &:nth-child(3) .steps__item-list .steps__item-item:nth-child(2)::before {
+    content: url('/src/img/icons/steps/8.png');
+  }
+}
+
+.steps__item-number {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 78px;
+  text-transform: uppercase;
+}
+
+.steps__item-list {
+  @include reset-list;
+}
+
+.steps__item-item {
+  padding-left: 63px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+  }
+}
+
+.steps__progress-bar {
+  margin-bottom: 15px;
+}
+
+.steps__bar-label {
+  margin-bottom: 0;
+}
