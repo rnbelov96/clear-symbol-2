@@ -1,4 +1,8 @@
 .grass {
   @include bg;
   background-image: url('/src/img/bgs/stock-bg.jpg');
+
+  @media (min-width: 1920px) {
+    background-size: auto;
+  }
 }

@@ -5,7 +5,7 @@
   @include max-width(452px);
   background-color: white;
   border-radius: 10px;
-  padding-top: 13px;
+  padding-top: 27px;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 18px;
@@ -26,6 +26,10 @@
       margin-left: auto;
       margin-right: auto;
       left: 0px;
+    }
+
+    @media (max-width: 575px) {
+      display: none;
     }
   }
 
@@ -111,12 +115,69 @@
     }
   }
 
+  &_city {
+    top: 103px;
+    .modal-form__bg {
+      background-color: rgba(255, 255, 255, 0.42);
+    }
+
+    @media (max-width: 1200px) {
+      top: 12px;
+      left: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &_modal {
+    width: 98%;
+    left: 0px;
+    .modal-form__input-box {
+      text-align: left;
+    
+      &:nth-child(3) .modal-form__label::before {
+        position: absolute;
+        content: url('/src/img/icons/form/name.png');
+        left: 26px;
+        bottom: -73px;
+        z-index: 1;
+      }
+    
+      &:nth-child(4) .modal-form__label::before {
+        position: absolute;
+        content: url('/src/img/icons/form/phone.png');
+        left: 26px;
+        bottom: -73px;
+        z-index: 1;
+      }
+    
+      &:nth-child(5) .modal-form__label::before {
+        position: absolute;
+        content: url('/src/img/icons/form/envelope.png');
+        left: 22px;
+        bottom: -70px;
+        z-index: 1;
+      }
+    }
+
+    .modal-form__policy-text {
+      text-align: left;
+    }
+  }
+
   @media (max-width: 575px) {
     padding-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 20px;
   }
+}
+
+.modal-form__title {
+  font-size: 22px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 400;
 }
 
 .modal-form__bg {

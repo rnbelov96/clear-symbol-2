@@ -16,7 +16,7 @@ const validateForm = form => {
     phoneInputEl.classList.add('input-error');
     isOk = false;
   }
-  if (emailInputEl.value === '') {
+  if (emailInputEl && emailInputEl.value === '') {
     emailInputEl.classList.add('input-error');
     isOk = false;
   }
@@ -33,7 +33,7 @@ const validateForm = form => {
     isOk = false;
   }
 
-  if (emailInputEl.value !== '' && !validator.isEmail(emailInputEl.value)) {
+  if (emailInputEl && emailInputEl.value !== '' && !validator.isEmail(emailInputEl.value)) {
     emailInputEl.classList.add('input-error');
     isOk = false;
   }
@@ -42,7 +42,7 @@ const validateForm = form => {
     if (nameInputEl) {
       localStorage.setItem('userName', nameInputEl.value);
     } else {
-      localStorage.setItem('userName', '');
+      localStorage.setItem('userName', 'Гость');
     }
 
     return true;
@@ -149,34 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (document.formData.name === undefined) document.formData.name = window.location.hostname;
 
-      const bitrixData = {
-        email: document.formData.email,
-        phone: document.formData.phone,
-        city: document.formData.city,
-        name: document.formData.name,
-      };
-      let bitrixFormBody = [];
-      Object.keys(bitrixData).forEach(key => {
-        const encodedKey = encodeURIComponent(key);
-        const encodedValue = encodeURIComponent(bitrixData[key]);
-        bitrixFormBody.push(`${encodedKey}=${encodedValue}`);
-      });
-      bitrixFormBody = bitrixFormBody.join('&');
-      await fetch(
-        'bitrix/index.php',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-          },
-          body: bitrixFormBody,
-        },
-      );
-
       const data = JSON.stringify(document.formData);
 
       const response = await fetch(
-        'https://tp3g2f5vh2.execute-api.eu-central-1.amazonaws.com/dev/add_lead',
+        'https://f5leads.franch5.ru/add_lead',
         {
           method: 'POST',
           headers: {

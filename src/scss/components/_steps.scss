@@ -6,6 +6,12 @@
   position: relative;
   top: -170px;
   margin-bottom: -170px;
+
+  @media (max-width: 1200px) {
+    top: 0;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
 }
 
 .steps__title {
@@ -15,12 +21,47 @@
   margin-bottom: 71px;
   color: #51973a;
   @include max-width(680px);
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 50px;
+  }
 }
 
 .steps__list {
   @include reset-list;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 37px;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/steps-grass-left.png');
+    position: absolute;
+    top: -160px;
+    left: -390px;
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/steps-grass-right.png');
+    position: absolute;
+    top: -420px;
+    right: -390px;
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+  }
 }
 
 .steps__item {
@@ -31,18 +72,43 @@
   background-position: center center;
   padding-top: 66px;
   padding-right: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   padding-left: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media (max-width: 1200px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    width: 280px;
+    height: 404px;
+    min-height: auto;
+    background-size: cover;
+    padding-top: 45px;
+  }
 
   &:nth-child(1) .steps__item-list .steps__item-item {
     margin-bottom: 50px;
+
+    @media (max-width: 575px) {
+      margin-bottom: 45px;
+    }
   }
 
   &:nth-child(2) .steps__item-list .steps__item-item {
     margin-bottom: 30px;
+
+    @media (max-width: 575px) {
+      margin-bottom: 20px;
+    }
   }
 
   &:nth-child(3) .steps__item-list .steps__item-item {
@@ -78,8 +144,12 @@
 .steps__item-number {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 78px;
+  margin-bottom: 60px;
   text-transform: uppercase;
+
+  @media (max-width: 575px) {
+    margin-bottom: 30px;
+  }
 }
 
 .steps__item-list {
@@ -100,6 +170,7 @@
 
 .steps__progress-bar {
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .steps__bar-label {

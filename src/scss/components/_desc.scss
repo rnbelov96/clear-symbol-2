@@ -6,6 +6,11 @@
   @media (max-width: 1200px) {
     padding-bottom: 100px;
   }
+
+  @media (max-width: 575px) {
+    min-height: auto;
+    padding-bottom: 30px;
+  }
 }
 
 .desc__title {
@@ -140,9 +145,7 @@
   }
 
   @media (max-width: 575px) {
-    margin-left: 0;
-    font-size: 18px;
-    margin-bottom: 30px;
+    display: none;
   }
 }
 

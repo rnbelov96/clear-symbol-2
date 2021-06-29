@@ -15,6 +15,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/bird.png');
+    position: absolute;
+    top: -110px;
+    right: -770px;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 1200px) {
     align-items: center;

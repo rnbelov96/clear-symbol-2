@@ -4,6 +4,16 @@ export {};
 const leftColor = '#73d652';
 const rightColor = '#c1c1c1';
 
+const shopAmountLabelList = [
+  'одного магазина',
+  'двух магазинов',
+  'трех магазинов',
+  'четырех магазинов',
+  'пяти магазинов',
+];
+
+const shopAmountLabelEl = document.querySelector('.js-shop-amount-label') as HTMLSpanElement;
+
 const rangeElList = document.querySelectorAll('.js-range');
 
 const rentRange = document.querySelector('.js-rent-range') as HTMLInputElement;
@@ -78,6 +88,8 @@ radioListContainerEl?.addEventListener('click', (e: Event) => {
   }
 
   currentShopAmount = Number((clickedElement as HTMLInputElement).value);
+
+  shopAmountLabelEl.textContent = shopAmountLabelList[currentShopAmount - 1];
 
   calcResult();
 });

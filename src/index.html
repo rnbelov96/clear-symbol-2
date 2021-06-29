@@ -39,6 +39,7 @@
                 Бесплатная консультация
               </button>
             </div>
+            <a href="tel:+78002349168" class="header__phone-icon"></a>
           </header>
 
           <h1 class="desc__title">
@@ -55,6 +56,9 @@
                 зарабатывайте
                 <b>от 120&nbsp;000 до 250&nbsp;000 рублей в месяц</b>
               </p>
+              <button class="button button_present js-present">
+                Получить презентацию
+              </button>
               <p class="desc__note">
                 Оставьте заявку на презентацию франшизы и финансовую модель
               </p>
@@ -659,7 +663,7 @@
           </ul>
           <div class="calc__result-box">
             <p class="calc__result-text">
-              Прибыль <span class="js-shop-label">одного магазина</span>:
+              Прибыль <span class="js-shop-amount-label">одного магазина</span>:
             </p>
             <div class="calc__result-number">
               <span class="js-calc-result">250 000</span> рублей
@@ -811,7 +815,10 @@
                 </ul>
               </div>
               <div class="steps__item-bottom">
-                <img src="./img/icons/steps/line-1.png" class="steps__progress-bar" />
+                <img
+                  src="./img/icons/steps/line-1.png"
+                  class="steps__progress-bar"
+                />
                 <p class="steps__bar-label">1 неделя</p>
               </div>
             </li>
@@ -833,7 +840,10 @@
                 </ul>
               </div>
               <div class="steps__bottom">
-                <img src="./img/icons/steps/line-2.png" class="steps__progress-bar" />
+                <img
+                  src="./img/icons/steps/line-2.png"
+                  class="steps__progress-bar"
+                />
                 <p class="steps__bar-label">2-3 неделя</p>
               </div>
             </li>
@@ -850,16 +860,274 @@
                 </ul>
               </div>
               <div class="steps__bottom">
-                <img src="./img/icons/steps/line-3.png" class="steps__progress-bar" />
+                <img
+                  src="./img/icons/steps/line-3.png"
+                  class="steps__progress-bar"
+                />
                 <p class="steps__bar-label">4 неделя</p>
               </div>
             </li>
           </ul>
 
-          <button class="button button_plan">Получить план открытия</button>
+          <button class="button button_plan js-plan">Получить план открытия</button>
+        </div>
+      </section>
+
+      <section class="support">
+        <div class="container">
+          <h2 class="support__title">
+            Полная поддержка <br />
+            партнеров на всех этапах
+          </h2>
+          <ul class="support__list">
+            <li class="support__item">
+              <img
+                src="./img/gallery/support/1.jpg"
+                class="support__item-img"
+              />
+              <p class="support__item-title">
+                Обучаем <br />
+                управлению
+              </p>
+              <p class="support__text">
+                Передаём знания по специфике управления магазином бытовой химии
+                в розлив
+              </p>
+            </li>
+            <li class="support__item">
+              <img
+                src="./img/gallery/support/2.jpg"
+                class="support__item-img"
+              />
+              <p class="support__item-title">
+                Помогаем <br />
+                с персоналом
+              </p>
+              <p class="support__text">
+                Поддерживаем в поисках продавцов, обучаем их до экспертности 14
+                дней
+              </p>
+            </li>
+            <li class="support__item">
+              <img
+                src="./img/gallery/support/3.jpg"
+                class="support__item-img"
+              />
+              <p class="support__item-title">
+                Настраиваем <br />
+                работу соцсетей
+              </p>
+              <p class="support__text">
+                Полностью помогаем с VK и Instagram, ключевыми каналами
+                продвижения
+              </p>
+            </li>
+            <li class="support__item">
+              <img
+                src="./img/gallery/support/4.jpg"
+                class="support__item-img"
+              />
+              <p class="support__item-title">
+                Налаживаем <br />
+                поставки
+              </p>
+              <p class="support__text">
+                Формируем ассортимент под каждый регион и поставляем товар
+                напрямую — 100+ позиций
+              </p>
+            </li>
+            <li class="support__item">
+              <img
+                src="./img/gallery/support/5.jpg"
+                class="support__item-img"
+              />
+              <p class="support__item-title">
+                Обеспечиваем <br />
+                поток клиентов
+              </p>
+              <p class="support__text">
+                Наладим заявки от оптовых покупателей, сделаем поток клиентов
+                стабильным
+              </p>
+            </li>
+            <li class="support__item">
+              <img
+                src="./img/gallery/support/6.jpg"
+                class="support__item-img"
+              />
+              <p class="support__item-title">
+                Поддерживаем <br />
+                после открытия
+              </p>
+              <p class="support__text">
+                Создадим систему контроля за работой вашего магазина и всегда
+                будем на связи
+              </p>
+            </li>
+          </ul>
+
+          <button class="button button_plan js-documents">
+            Получить комплект документов
+          </button>
+        </div>
+      </section>
+
+      <section class="city">
+        <div class="container">
+          <div class="city__content">
+            <div class="city__left-side">
+              <h2 class="city__title">
+                В некоторые города <br />
+                мы продаем эксклюзивное <br />
+                право на открытие <br />
+                магазинов Символ Чистоты <br />
+              </h2>
+              <div class="city__title-box">
+                <div class="city__title-block">Проверьте свободен</div>
+                <div class="city__title-block">ли ваш город</div>
+              </div>
+            </div>
+
+            <form class="modal-form modal-form_city">
+              <div class="modal-form__bg"></div>
+              <h3 class="modal-form__title">
+                Заполните форму <br />
+                для проверки города
+              </h3>
+              <div class="modal-form__input-box">
+                <label for="city-city" class="modal-form__label"
+                  >Введите ваш город</label
+                ><input
+                  type="text"
+                  id="city-city"
+                  placeholder="Город"
+                  data-type="city"
+                  name="city"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <label for="city-phone" class="modal-form__label"
+                  >Введите ваш телефон</label
+                ><input
+                  type="text"
+                  id="city-phone"
+                  placeholder="+7 (___) ___ ____"
+                  data-type="phone"
+                  name="phone"
+                  class="modal-form__input"
+                />
+              </div>
+              <button type="submit" class="button button_modal-form js-present">
+                Получить презентацию
+              </button>
+              <p class="modal-form__policy-text">
+                Нажимая на кнопку «Получить презентацию», я даю согласие на
+                обработку персональных данных и соглашаюсь с
+                <button type="button" class="js-policy">
+                  политикой конфиденциальности
+                </button>
+              </p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__text-box">
+            <p class="footer__company-name">© «Символ чистоты», 2021</p>
+            <address class="footer__company-address">
+              г. Казань, Восстания д. 100 <br />
+              Технополис "Химград"
+            </address>
+          </div>
+          <div class="footer__center-box">
+            <button class="footer__policy js-policy">
+              Политика конфиденциальности
+            </button>
+            <div class="footer__social-box">
+              <p class="footer__social-text">Мы в социальных сетях</p>
+              <div class="footer__social-links">
+                <a href="" class="footer__social-link"></a
+                ><a href="" class="footer__social-link"></a
+                ><a href="" class="footer__social-link"></a
+                ><a href="" class="footer__social-link"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__contact-box">
+            <a href="+78002349168" class="footer__phone">8 (800) 234-91-68</a
+            ><button class="footer__callback js-callback">
+              Бесплатная консультация
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="modal__center-wrapper">
+        <form class="modal-form modal-form_modal">
+          <div class="modal-form__bg"></div>
+          <h3 class="modal-form__title">Отправьте заявку <span class="js-modal-form-title"></span></h3>
+          <div class="modal-form__input-box">
+            <label for="modal-name" class="modal-form__label"
+              >Введите ваше имя</label
+            ><input
+              type="text"
+              id="modal-name"
+              placeholder="Иванов Иван"
+              data-type="name"
+              name="name"
+              class="modal-form__input"
+            />
+          </div>
+          <div class="modal-form__input-box">
+            <label for="modal-phone" class="modal-form__label"
+              >Введите ваш телефон</label
+            ><input
+              type="text"
+              id="modal-phone"
+              placeholder="+7 (___) ___ ____"
+              data-type="phone"
+              name="phone"
+              class="modal-form__input"
+            />
+          </div>
+          <div class="modal-form__input-box">
+            <label for="modal-email" class="modal-form__label"
+              >Введите ваш e-mail</label
+            ><input
+              type="email"
+              id="modal-email"
+              placeholder="example@mail.ru"
+              data-type="email"
+              name="email"
+              class="modal-form__input"
+            />
+          </div>
+          <button type="submit" class="button button_modal-form">
+            Оставить заявку
+          </button>
+          <p class="modal-form__policy-text">
+            Нажимая на кнопку «Оставить заявку», я даю согласие на обработку
+            персональных данных и соглашаюсь с
+            <button type="button" class="js-policy">
+              политикой конфиденциальности
+            </button>
+          </p>
+          <button
+            data-modal-close=""
+            class="modal__close"
+            title="Закрыть"
+            type="button"
+          ></button>
+        </form>
+      </div>
+    </div>
 
     <div class="modal">
       <div class="priv-policy priv-policy_modal">
@@ -1119,9 +1387,6 @@
           title="Закрыть"
         ></button>
       </div>
-    </div>
-    <div class="modal">
-      <div class="modal__center-wrapper"></div>
     </div>
   </body>
 </html>

@@ -12,6 +12,18 @@
   font-weight: 900;
   color: white;
   margin-bottom: 100px;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/stock-branch.png');
+    position: absolute;
+    top: -260px;
+    right: -360px;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 767px) {
     br {

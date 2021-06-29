@@ -1,0 +1,133 @@
+.city {
+  min-height: 975px;
+  @include bg;
+  background-image: url('/src/img/bgs/city-bg.jpg');
+  padding-top: 164px;
+  padding-bottom: 135px;
+
+  @media (min-width: 1920px) {
+    background-size: auto;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 82px;
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
+
+.city__content {
+  display: flex;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.city__left-side {
+  margin-right: 80px;
+
+  @media (max-width: 1200px) {
+    margin-right: 0;
+  }
+}
+
+.city__title {
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 99px;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/grass-city.png');
+    position: absolute;
+    top: -510px;
+    right: -937px;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 34px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 25px;
+  }
+}
+
+.city__title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 1200px) {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+.city__title-block {
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 27px;
+  padding-right: 27px;
+  background-color: #ddd355;
+  margin-left: 119px;
+  text-transform: uppercase;
+
+  &:last-child {
+    position: relative;
+    padding-top: 0;
+
+    &::before {
+      content: url('/src/img/city-arrow.png');
+      position: absolute;
+      top: 70px;
+      right: -230px;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 21px;
+    margin-left: 0;
+  }
+
+  &:first-child {
+    padding-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: url('/src/img/map.png');
+      position: absolute;
+      top: -3px;
+      left: -180px;
+
+      @media (max-width: 575px) {
+        content: none;
+      }
+    }
+  }
+}

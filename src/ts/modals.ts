@@ -3,12 +3,16 @@ export {};
 
 const modalFormInfoList = [
   {
-    title: 'Оставить заявку на бесплатную консультацию',
-    button: 'Получить консультацию',
+    title: 'на бесплатную консультацию',
   },
   {
-    title: 'Оставьте заявку и получите подробный бизнес-план',
-    button: 'Получить подробный бизнес-план',
+    title: 'и получите подробный план открытия',
+  },
+  {
+    title: 'на презентацию франшизы и финансовую модель',
+  },
+  {
+    title: 'и получите полный комплект документов',
   },
 ];
 
@@ -27,23 +31,20 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [policyModalEl, formModalEl, youtubeAdvModalEl, requisitesModalEl] = modalElList;
+const [formModalEl, policyModalEl] = modalElList;
 
-const formTitleEl = formModalEl.querySelector('h2') as HTMLHeadingElement;
-const formBtnEl = formModalEl.querySelector('button') as HTMLButtonElement;
+const formTitleEl = formModalEl.querySelector(
+  '.js-modal-form-title',
+) as HTMLHeadingElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
-    if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
+    if (
+      e.target === e.currentTarget
+      || [...modalWrapperElList].includes(e.target as Element)
+    ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
-      if (clickedModal === youtubeAdvModalEl) {
-        const iframe = clickedModal.querySelector('iframe');
-        if (iframe) {
-          const iframeSrc = iframe.src;
-          iframe.src = iframeSrc;
-        }
-      }
       closeModal(clickedModal);
     }
   });
@@ -51,10 +52,16 @@ modalElList.forEach(modalEl => {
 
 const closeModalElList = document.querySelectorAll('.modal__close');
 closeModalElList.forEach(closeEl => {
-  closeEl.addEventListener('click', () => {
-    modalElList.forEach(modalEL => {
-      closeModal(modalEL as HTMLDivElement);
-    });
+  closeEl.addEventListener('click', (e: Event) => {
+    let modalToClose = (e.target as HTMLButtonElement)
+      .parentElement as HTMLDivElement;
+    if (!modalToClose?.classList.contains('modal')) {
+      modalToClose = modalToClose?.parentElement as HTMLDivElement;
+    }
+    if (!modalToClose?.classList.contains('modal')) {
+      modalToClose = modalToClose?.parentElement as HTMLDivElement;
+    }
+    closeModal(modalToClose);
   });
 });
 
@@ -68,28 +75,31 @@ policyBtnElList.forEach(el => {
 
 const callbackBtnElList = document.querySelectorAll('.js-callback');
 const planBtnElList = document.querySelectorAll('.js-plan');
+const presentBtnElList = document.querySelectorAll('.js-present');
+const documentsBtnElList = document.querySelectorAll('.js-documents');
 
 callbackBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     formTitleEl.textContent = modalFormInfoList[0].title;
-    formBtnEl.textContent = modalFormInfoList[0].button;
     openModal(formModalEl as HTMLDivElement);
   });
 });
 planBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     formTitleEl.textContent = modalFormInfoList[1].title;
-    formBtnEl.textContent = modalFormInfoList[1].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+presentBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formTitleEl.textContent = modalFormInfoList[2].title;
     openModal(formModalEl as HTMLDivElement);
   });
 });
 
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
-youtubeAdvBtnCallEl.addEventListener('click', () => {
-  openModal(youtubeAdvModalEl as HTMLDivElement);
-});
-
-const requisitesBtnCallEl = document.querySelector('.js-requisites-call') as HTMLButtonElement;
-requisitesBtnCallEl.addEventListener('click', () => {
-  openModal(requisitesModalEl as HTMLDivElement);
+documentsBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formTitleEl.textContent = modalFormInfoList[3].title;
+    openModal(formModalEl as HTMLDivElement);
+  });
 });
