@@ -3,35 +3,57 @@
 @import './base/variables.scss';
 @import './base/mixins.scss';
 @import './base/global.scss';
+@import './components/button.scss';
 
-.thanks__main {
-  position: relative;
-  padding-bottom: 418px;
-  overflow-x: hidden;
+.thanks {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  overflow: hidden;
 
-  @media (max-width: 575px) {
-    padding-bottom: 350px;
+  @media (max-width: 1200px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 70px;
   }
 }
 
-.thanks__header {
-  display: flex;
-  justify-content: center;
-  padding-top: 48px;
-  padding-bottom: 208px;
+.thanks__logo {
+  display: block;
+  margin-bottom: 124px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 70px;
+  }
 
   @media (max-width: 575px) {
-    padding-bottom: 130px;
+    @include max-width(330px);
   }
 }
 
 .thanks__title {
-  text-align: center;
-  font-weight: 900;
+  font-family: Montserrat;
   font-size: 54px;
-  line-height: 64px;
+  font-weight: 900;
   color: black;
-  margin-bottom: 15px;
+  margin-bottom: 69px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    font-size: 48px;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/thanks-left.png');
+    top: -240px;
+    left: -390px;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
 
   span {
     color: #105e3b;
@@ -39,39 +61,24 @@
 }
 
 .thanks__text {
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 40px;
-  margin-bottom: 54px;
-  text-align: center;
-}
+  @include max-width(520px);
+  font-size: 26px;
+  margin-bottom: 70px;
 
-.thanks__button {
-  @include max-width(328px);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 60px;
-  border: 1px solid rgba(0, 137, 58, 1);
-  color: rgb(0, 137, 57);
-  font-size: 21px;
-  line-height: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  min-height: 71px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 
-  &:hover, &:active {
-    text-decoration: none;
-    color: rgb(0, 137, 57);
+  &::after {
+    position: absolute;
+    content: url('/src/img/thanks-right.png');
+    top: -541px;
+    right: -1013px;
+
+    @media (max-width: 767px) {
+      content: none;
+    }
   }
-}
 
-.thanks__img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  @media (max-width: 575px) {
+    font-size: 25px;
+  }
 }

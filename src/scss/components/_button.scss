@@ -29,6 +29,10 @@
     margin-bottom: 26px;
   }
 
+  &_thanks {
+    @include max-width(350px);
+  }
+
   &_plan {
     @include max-width(351px);
     margin-left: auto;
