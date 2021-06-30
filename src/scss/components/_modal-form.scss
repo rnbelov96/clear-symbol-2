@@ -134,7 +134,7 @@
     left: 0px;
     .modal-form__input-box {
       text-align: left;
-    
+
       &:nth-child(3) .modal-form__label::before {
         position: absolute;
         content: url('/src/img/icons/form/name.png');
@@ -142,7 +142,7 @@
         bottom: -73px;
         z-index: 1;
       }
-    
+
       &:nth-child(4) .modal-form__label::before {
         position: absolute;
         content: url('/src/img/icons/form/phone.png');
@@ -150,7 +150,7 @@
         bottom: -73px;
         z-index: 1;
       }
-    
+
       &:nth-child(5) .modal-form__label::before {
         position: absolute;
         content: url('/src/img/icons/form/envelope.png');
@@ -270,5 +270,10 @@
     @include reset-btn;
     color: #010101;
     font-weight: 100;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
   }
 }
