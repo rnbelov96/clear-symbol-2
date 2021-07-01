@@ -89,6 +89,9 @@
 
   @media (max-width: 575px) {
     border-radius: 10px;
+    @include max-width(340px);
+    text-align: center;
+    justify-content: center;
   }
 
   &_active {
