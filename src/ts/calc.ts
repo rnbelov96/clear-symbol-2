@@ -32,9 +32,9 @@ const optIncomeRange = document.querySelector(
 
 let currentShopAmount = 1;
 
-const calcResultLabelEl = document.querySelector(
+const calcResultLabelElList = document.querySelectorAll(
   '.js-calc-result',
-) as HTMLSpanElement;
+);
 const workPaymentLabelEl = document.querySelector(
   '.js-work-payment',
 ) as HTMLSpanElement;
@@ -75,7 +75,9 @@ const calcResult = () => {
       + Number(optIncomeRange.value)
       - calcTotalWaste())
     * currentShopAmount;
-  calcResultLabelEl.textContent = result.toLocaleString();
+  calcResultLabelElList.forEach(el => {
+    el.textContent = result.toLocaleString();
+  });
 };
 
 calcResult();
